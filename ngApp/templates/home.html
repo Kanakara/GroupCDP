@@ -1,3 +1,4 @@
+<div class = "container-fluid">
 <h1>Home Page</h1>
 
 <label>Search</label>
@@ -6,7 +7,7 @@
 
 <ul>
   <li ng-repeat="car in vm.cars | filter:{ShortDescription:holder} | filter:{CarMakeId: select}">
-  {{car.ShortDescription}}
+  <a role = "button" ng-click = "vm.showModal(car)">{{car.ShortDescription}}</a>
 </li>
 </ul>
 
@@ -14,3 +15,4 @@
   <option style = "display:none"> -- select an option -- </option>
   <option ng-repeat="make in vm.makes" value="{{make.id}}">{{make.name}}</option>
 </select>
+</div>

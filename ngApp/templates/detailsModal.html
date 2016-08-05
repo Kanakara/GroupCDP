@@ -1,0 +1,12 @@
+<center>
+<div class="modal-header">
+    <h1 class="modal-title">{{vm.car.ShortDescription}}</h1>
+</div>
+<div class="modal-body">
+    <img class = "img-responsive" ng-src = "{{vm.car.ImageUrl}}"/>
+    <h3>{{vm.car.FullDescription}}</h3>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="vm.exit()">OK</button>
+</div>
+</center>
