@@ -1,7 +1,15 @@
 <h1>Home Page</h1>
 
+<label>Search</label>
+<input ng-model="holder"  type="text"/>
+<br>
+
 <ul>
-  <li ng-repeat="car in vm.cars">
+  <li ng-repeat="car in vm.cars| filter:{ShortDescription:holder}">
   {{car.ShortDescription}}
 </li>
 </ul>
+
+<select>
+  <option ng-repeat="make in vm.makes">{{make.name}}</option>
+</select>
