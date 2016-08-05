@@ -5,11 +5,12 @@
 <br>
 
 <ul>
-  <li ng-repeat="car in vm.cars| filter:{ShortDescription:holder}">
+  <li ng-repeat="car in vm.cars | filter:{ShortDescription:holder} | filter:{CarMakeId: select}">
   {{car.ShortDescription}}
 </li>
 </ul>
 
-<select>
-  <option ng-repeat="make in vm.makes">{{make.name}}</option>
+<select ng-model="select" ng-change="">
+  <option style = "display:none"> -- select an option -- </option>
+  <option ng-repeat="make in vm.makes" value="{{make.id}}">{{make.name}}</option>
 </select>
